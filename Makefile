@@ -1,19 +1,19 @@
+COMPONENT  ?= $(firstword $(shell which $(CURDIR)/node_modules/.bin/component) $(shell which component))
+STANDALONE := selectn
 
 build: components index.js
-	@./node_modules/.bin/component build --dev
+	@$(COMPONENT) build --dev
 
 components:
-	@./node_modules/.bin/component install --dev
+	@$(COMPONENT) install --dev
 
 clean:
-	rm -fr build components
+	$(RM) -fr build components $(STANDALONE).js
 
-select.js: components index.js
-	@./node_modules/.bin/component build --standalone select --name select --out .
+$(STANDALONE).js: components index.js
+	@$(COMPONENT) build --standalone $(STANDALONE) --name $(STANDALONE) --out .
 
 test:
-	@./node_modules/.bin/mocha \
-		--require chai \
-		--reporter spec
+	@./node_modules/.bin/mocha --reporter spec
 
 .PHONY: clean test

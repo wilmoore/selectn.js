@@ -207,44 +207,52 @@ require.relative = function(parent) {
 
   return localRequire;
 };
-require.register("select/index.js", function(exports, require, module){
+require.register("selectn/index.js", function(exports, require, module){
 
-// expose `select`
+// expose `selectn`
 
-module.exports = select;
+module.exports = selectn;
 
 /**
  * Select n-levels deep into an object given a dot/bracket-notation query
  * by returning an accessor function that accepts an object to be queried
  *
  *    @example
- *      select('name.first')(contact);
+ *      selectn('name.first')(contact);
  *
  *    @example
- *      select('addresses[0].street')(contact);
+ *      selectn('addresses[0].street')(contact);
  *
  *    @example
- *      contacts.map(select('name.first'));
+ *      contacts.map(selectn('name.first'));
  *
  * @param  {String} query
  * dot/bracket-notation query string
  *
  * @return {Function}
  * accessor function that accepts an object to be queried
+ *
+ * @return {Object} return.value
+ * object to access
+ *
+ * @return {Mixed}  return.return
+ * value at given reference or undefined if it does not exist
  */
 
-function select(query) {
+function selectn(query) {
   var parts;
 
-  // normalize to `.property` access (i.e. `a.b[0]` becomes `a.b.0`)
+  // normalize query to `.property` access (i.e. `a.b[0]` becomes `a.b.0`)
   query = query.replace(/\[(\d+)\]/, '.$1');
   parts = query.split('.');
 
   /**
    * Accessor function that accepts an object to be queried
    *
+   * @private
+   *
    * @param  {Object} object
-   * object to query into
+   * object to access
    *
    * @return {Mixed}
    * value at given reference or undefined if it does not exist
@@ -264,12 +272,13 @@ function select(query) {
   };
 }
 
+
 });
 
 if (typeof exports == "object") {
-  module.exports = require("select");
+  module.exports = require("selectn");
 } else if (typeof define == "function" && define.amd) {
-  define(function(){ return require("select"); });
+  define(function(){ return require("selectn"); });
 } else {
-  window["select"] = require("select");
+  window["selectn"] = require("selectn");
 }})();

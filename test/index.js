@@ -1,14 +1,14 @@
 var select = require('..');
 var expect = require('chai').expect;
 
-describe('select()', function(){
+describe('selectn()', function(){
 
   // common test fixtures
   var talks  = [
-    { info: { name: 'Go Ahead, Make a Mess' }},
-    { info: { name: 'Silex Anatomy' }},
-    { info: { name: 'Unit Testing in Python' }},
-    { info: { name: 'Setting the Stage' }}
+    { info: { name: 'Go Ahead, Make a Mess',  feedback: [8, 9, 10] }},
+    { info: { name: 'Silex Anatomy',          feedback: [8, 9, 10] }},
+    { info: { name: 'Unit Testing in Python', feedback: [8, 9, 10] }},
+    { info: { name: 'Setting the Stage',      feedback: [8, 9, 10] }}
   ];
 
   it('returns an accessor function', function() {
@@ -37,6 +37,16 @@ describe('select()', function(){
     var expected = talks.map(select('info.name'));
 
     expect(expected).to.eql(actual);
+  });
+
+  it('supports bracket/numeric access', function() {
+    var accessor = select('info.feedback[1]');
+    expect(accessor(talks[0])).to.equal(9);
+  });
+
+  it('ignores non-numeric bracket access', function() {
+    var accessor = select('info["feedback"]');
+    expect(accessor(talks[0])).to.be.an('undefined');
   });
 
 });

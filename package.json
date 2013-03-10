@@ -1,15 +1,30 @@
 {
-  "name": "select",
-  "repo": "component/to-function",
+  "name": "selectn",
+  "author": "Wil Moore III <wil.moore@wilmoore.com>",
   "description": "Select n-levels deep into an object by providing a dot/bracket-notation query string.",
-  "version": "0.0.1",
-  "keywords": ["utility", "deep", "reach", "nested", "predicate", "function"],
+  "version": "0.2.3",
+  "keywords": [
+    "object",
+    "property",
+    "access",
+    "deep",
+    "nested",
+    "predicate",
+    "functional",
+    "functor"
+  ],
   "main": "./index",
-  "dependencies": {},
-  "devDependencies": { "mocha": "*", "chai": "*", "component": "*" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wilmoore/selectn"
+  },
   "component": {
     "scripts": {
-      "select/index.js": "index.js"
+      "selectn": "index.js"
     }
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
   }
 }
