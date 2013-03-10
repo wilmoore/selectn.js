@@ -1,0 +1,15 @@
+{
+  "name": "select",
+  "repo": "component/to-function",
+  "description": "Select n-levels deep into an object by providing a dot/bracket-notation query string.",
+  "version": "0.0.1",
+  "keywords": ["utility", "deep", "reach", "nested", "predicate", "function"],
+  "main": "./index",
+  "dependencies": {},
+  "devDependencies": { "mocha": "*", "chai": "*", "component": "*" },
+  "component": {
+    "scripts": {
+      "select/index.js": "index.js"
+    }
+  }
+}

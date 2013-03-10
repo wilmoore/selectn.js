@@ -1,0 +1,12 @@
+{
+  "name": "select",
+  "repo": "wilmoore/select.js",
+  "description": "Select n-levels deep into an object by providing a dot/bracket-notation query string.",
+  "version": "0.0.1",
+  "keywords": ["utility", "deep", "reach", "nested", "predicate", "function"],
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "index.js"
+  ]
+}
