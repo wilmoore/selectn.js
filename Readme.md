@@ -2,6 +2,10 @@
 
   Select n-levels deep into an object by providing a dot/bracket-notation query string.
 
+## Build Status
+
+![Build Status](https://api.travis-ci.org/wilmoore/selectn.png)
+
 ## Features
 
   - `selectn` is simple, tiny and exposes a fluent API
