@@ -1,5 +1,6 @@
 COMPONENT  ?= $(firstword $(shell which $(CURDIR)/node_modules/.bin/component) $(shell which component))
 STANDALONE := selectn
+MOCHAFLAGS ?= --reporter dot
 
 build: components index.js
 	@$(COMPONENT) build --dev
@@ -14,6 +15,6 @@ $(STANDALONE).js: components index.js
 	@$(COMPONENT) build --standalone $(STANDALONE) --name $(STANDALONE) --out .
 
 test:
-	@./node_modules/.bin/mocha --reporter spec
+	@./node_modules/.bin/mocha $(MOCHAFLAGS)
 
 .PHONY: clean test
