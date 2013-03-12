@@ -4,7 +4,9 @@
 
 ## Build Status
 
-![Build Status](https://api.travis-ci.org/wilmoore/selectn.png)
+<a href="https://travis-ci.org/wilmoore/selectn">
+  ![Build Status](https://api.travis-ci.org/wilmoore/selectn.png)
+</a>
 
 ## Features
 
