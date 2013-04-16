@@ -4,9 +4,7 @@
 
 ## Build Status
 
-<a href="https://travis-ci.org/wilmoore/selectn">
-  ![Build Status](https://api.travis-ci.org/wilmoore/selectn.png)
-</a>
+[![Build Status](https://travis-ci.org/wilmoore/selectn.png?branch=master)](https://travis-ci.org/wilmoore/selectn)
 
 ## Features
 
@@ -19,7 +17,7 @@
 
 ## Installation
 
-[component](http://component.io/wilmoore/selectn)
+[![component](https://component.jit.su/component-badge.svg)](http://component.io/wilmoore/selectn)
 
     $ component install wilmoore/selectn
 
