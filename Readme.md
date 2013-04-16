@@ -1,6 +1,6 @@
 # selectn
 
-  Select n-levels deep into an object by providing a dot/bracket-notation query string.
+  N-levels deep object access via dot/bracket-notation property access string.
 
 ## Build Status
 
@@ -10,7 +10,7 @@
 
 ## Features
 
-  - `selectn` is simple, tiny and exposes a fluent API
+  - `selectn` is simple, tiny and exposes a composable API
   - ES5 and non-ES5 compatible
 
 ## Non-Features
@@ -68,6 +68,29 @@ talks.map(query);
 // => [ 'Go Ahead, Make a Mess', 'Silex Anatomy', 'Unit Testing in Python', 'Setting the Stage' ]
 ```
 
+## Example (Higher-Order Functions)
+
+You expect the following JSON data from an XMLHttpRequest:
+
+```js
+var data = {
+  Client: {
+    Message: { id: d50afb80-a6be-11e2-9e96-0800200c9a66 }
+  }
+};
+```
+Use the [promise] API to extract the data:
+
+```js
+var id = selectn('Client.Message.id');
+
+$.ajax({...})
+  .then(id)
+  .then(console.log);
+
+//=> d50afb80-a6be-11e2-9e96-0800200c9a66
+```
+
 ## Rationale
 
 In larger, data-driven applications, there tends to be a need to do a lot of deep object access which can quickly lead to code like this:
@@ -104,4 +127,4 @@ Alternatively, you can use [`typeof`][typeof]; however, it's limited in it's flu
 [eval]:         https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/eval
 [note]:         https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Operators/Member_Operators#Note_on_eval
 [typeof]:       https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Operators/typeof
-
+[promise]:     http://promises-aplus.github.io/promises-spec/
