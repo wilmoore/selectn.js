@@ -114,8 +114,9 @@ var name = selectn('info.name.full')(contact) || 'unknown';
 
 ## Inspiration
 
-- [to-function][to-function]
-- [reach][reach]
+- [to-function][]
+- [reach][]
+- [dref][]
 
 ## License
 
@@ -125,6 +126,7 @@ var name = selectn('info.name.full')(contact) || 'unknown';
 
 [to-function]: https://github.com/component/to-function
 [reach]:       https://github.com/spumko/hoek#reachobj-chain
+[dref]:        https://github.com/crcn/dref.js
 [Function]:    https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function
 [eval]:        https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/eval
 [note]:        https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Operators/Member_Operators#Note_on_eval
