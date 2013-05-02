@@ -18,7 +18,7 @@
 
 ## Installation
 
-[![component](https://component.jit.su/component-badge.svg)](http://component.io/wilmoore/selectn)
+[component](http://component.io/wilmoore/selectn)
 
     $ component install wilmoore/selectn
 
