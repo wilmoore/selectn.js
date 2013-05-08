@@ -1,6 +1,6 @@
 # selectn
 
-  N-levels deep object access via dot/bracket-notation property access string.
+  N-levels deep object access via dot/bracket-notation property access string. Avoid madness like `if (object && object.a && object.a.b && object.a.b.c)`.
 
 ## Build Status
 
@@ -135,3 +135,4 @@ var name = selectn('info.name.full')(contact) || 'unknown';
 [promise]:     http://promises-aplus.github.io/promises-spec/
 [map]:         https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/map
 [primitive]:   http://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/
+
