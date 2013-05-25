@@ -2,7 +2,7 @@
   "name": "selectn",
   "author": "Wil Moore III <wil.moore@wilmoore.com>",
   "description": "N-levels deep object access via dot/bracket-notation property access string.",
-  "version": "0.2.3",
+  "version": "0.4.0",
   "keywords": [
     "object",
     "property",
