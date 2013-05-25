@@ -1,6 +1,6 @@
 # selectn
 
-  N-levels deep object access via dot/bracket-notation property access string allowing you to type `selectn('info.name.full')` instead of `contact && contact.info && contact.info.name &&` &infin;.
+  N-levels deep object access via dot/bracket-notation property access string allowing you to type `selectn('info.name.full')` instead of `obj && obj.info && obj.info.name &&` &infin;.
 
 ## Build Status
 

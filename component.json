@@ -1,8 +1,8 @@
 {
   "name": "selectn",
   "repo": "wilmoore/selectn",
-  "description": "Select n-levels deep into an object by providing a dot/bracket-notation query string.",
-  "version": "0.2.3",
+  "description": "N-levels deep object access via dot/bracket-notation property access string.",
+  "version": "0.4.0",
   "keywords": [
     "object",
     "property",
@@ -10,7 +10,6 @@
     "deep",
     "nested",
     "predicate",
-    "functional",
     "functor"
   ],
   "dependencies": {},

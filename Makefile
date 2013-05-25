@@ -1,4 +1,4 @@
-COMPONENT  ?= $(firstword $(shell which $(CURDIR)/node_modules/.bin/component) $(shell which component))
+COMPONENT  ?= $(shell which component)
 STANDALONE := selectn
 MOCHAFLAGS ?= --reporter dot
 
