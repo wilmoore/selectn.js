@@ -1,5 +1,6 @@
 var select = require('..');
 var expect = require('chai').expect;
+var assert = require('chai').assert;
 
 describe('selectn()', function(){
 
@@ -46,7 +47,9 @@ describe('selectn()', function(){
 
   it('ignores non-numeric bracket access', function() {
     var accessor = select('info["feedback"]');
-    expect(accessor(talks[0])).to.be.an('undefined');
+    var result   = accessor(talks[0]);
+
+    assert(result === undefined);
   });
 
 });
