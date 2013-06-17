@@ -49,7 +49,7 @@ selectn('info.name')(talk);
 // => 'Go Ahead, Make a Mess'
 ```
 
-## Example (functor predicate)
+## Iterator Example
 
 Given the following list:
 
@@ -65,11 +65,35 @@ the generated function can be used as a predicate for a functor:
 
 ```js
 var query = selectn('info.name');
+//=> [Function]
+
 talks.map(query);
 // => [ 'Go Ahead, Make a Mess', 'Silex Anatomy', 'Unit Testing in Python', 'Setting the Stage' ]
 ```
 
-## Example (Higher-Order Functions)
+## Predicate Example
+
+Given the following object of language strings:
+
+```js
+var language = [
+  { strings: { en: { name: 'english' } }},
+  { strings: { es: { name: 'spanish' } }},
+  { strings: { km: { name: 'khmer'   } }},
+  { strings: { es: { name: 'spanish' } }},
+];
+```
+the generated function can be used as a predicate for a functor:
+
+```js
+var spanish = selectn('strings.es');
+//=> [Function]
+
+language.filter(spanish).length;
+//=> 2
+```
+
+## Callback Example
 
 You expect the following JSON data from an XMLHttpRequest:
 
