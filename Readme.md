@@ -74,20 +74,15 @@ talks.map(query);
 You expect the following JSON data from an XMLHttpRequest:
 
 ```js
-var data = {
-  Client: {
-    Message: { id: d50afb80-a6be-11e2-9e96-0800200c9a66 }
-  }
-};
+var data = { Client: { Message: { id: d50afb80-a6be-11e2-9e96-0800200c9a66 } } };
 ```
-Use the [promise] API to extract the data:
+
+Access the `Client.Message.id` property and log the result to the console:
 
 ```js
-var id = selectn('Client.Message.id');
-
 $.ajax({...})
-  .then(id)
-  .then(console.log);
+  .then(selectn('Client.Message.id'))
+  .then(console.log.bind(console));
 
 //=> d50afb80-a6be-11e2-9e96-0800200c9a66
 ```
@@ -98,6 +93,7 @@ In larger, data-driven applications, there tends to be a need to do a lot of dee
 
 ```
 var name;
+
 if (contact && contact.info && contact.info.name) {
   name = contact.info.name.full || 'unknown';
 }
@@ -111,8 +107,8 @@ var name = selectn('info.name.full')(contact) || 'unknown';
 
 ## Alternatives
 
-- You can use [`typeof`][typeof]; however, [`typeof`][typeof] only "appears" to work due to the way the global scope is _implied_.
-- Other similar solutions invole [`eval`][eval] and/or [`Function`][Function] ([`eval`][note] in indisguise).
+- You can use [typeof][]; however, [typeof][] only "appears" to work due to the way the global scope is _implied_.
+- Other solutions involve [eval][] and/or [Function][] ([`eval`][note] in indisguise).
 
 ## Inspiration
 
