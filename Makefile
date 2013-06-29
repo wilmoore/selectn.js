@@ -17,4 +17,6 @@ $(STANDALONE).js: components index.js
 test:
 	@./node_modules/.bin/mocha $(MOCHAFLAGS)
 
+package: test $(STANDALONE).js
+
 .PHONY: clean test
