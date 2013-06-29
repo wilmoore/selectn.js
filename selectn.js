@@ -207,29 +207,25 @@ require.register("selectn/index.js", function(exports, require, module){
 module.exports = selectn;
 
 /**
- * Select n-levels deep into an object given a dot/bracket-notation query
- * by returning an accessor function that accepts an object to be queried
+ * Select n-levels deep into an object given a dot/bracket-notation query.
+ * If partially applied, returns a function accepting the second argument.
  *
- *    @example
- *      selectn('name.first')(contact);
+ * ### Examples:
  *
- *    @example
- *      selectn('addresses[0].street')(contact);
+ *      selectn('name.first', contact);
  *
- *    @example
+ *      selectn('addresses[0].street', contact);
+ *
  *      contacts.map(selectn('name.first'));
  *
  * @param  {String} query
  * dot/bracket-notation query string
  *
- * @return {Function}
- * accessor function that accepts an object to be queried
- *
- * @return {Object} return.value
+ * @param  {Object} object
  * object to access
  *
- * @return {Mixed}  return.return
- * value at given reference or undefined if it does not exist
+ * @return {Function}
+ * accessor function that accepts an object to be queried
  */
 
 function selectn(query) {
@@ -251,10 +247,10 @@ function selectn(query) {
    * value at given reference or undefined if it does not exist
    */
 
-  return function (object) {
-    var ref = object,
-        len = parts.length,
-        idx = 0;
+  function accessor(object) {
+    var ref = object || (1, eval)('this');
+    var len = parts.length;
+    var idx = 0;
 
     // iteratively save each segment's reference
     for (; idx < len; idx += 1) {
@@ -262,7 +258,12 @@ function selectn(query) {
     }
 
     return ref;
-  };
+  }
+
+  // curry accessor function allowing partial application
+  return arguments.length > 1
+       ? accessor(arguments[1]) 
+       : accessor;
 }
 
 

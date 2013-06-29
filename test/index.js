@@ -42,6 +42,7 @@ describe('selectn()', function(){
 
   it('supports bracket/numeric access', function() {
     var accessor = select('info.feedback[1]');
+
     expect(accessor(talks[0])).to.equal(9);
   });
 
@@ -50,6 +51,20 @@ describe('selectn()', function(){
     var result   = accessor(talks[0]);
 
     assert(result === undefined);
+  });
+
+  it('accesses the global object by default', function() {
+    var accessor = select('console.log');
+    assert(accessor() === console.log);
+  });
+
+  it('partial application equals normal application', function() {
+    var talk = { info: { name: 'Go Ahead, Make a Mess' } };
+
+    var normal  = select('info.name', talk);
+    var partial = select('info.name')(talk);
+
+    assert(normal === partial);
   });
 
 });
