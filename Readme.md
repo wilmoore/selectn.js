@@ -133,6 +133,15 @@ The following is much more concise:
 var name = selectn('info.name.full')(contact) || 'unknown';
 ```
 
+## Neckbeard Info
+
+In case you care about this sort of thing, we are able to do normal function application as well as partially apply when that is convenient due to `currying`.
+
+- `selectn('info.name.full', contact)` (normal function application)
+- `selectn('info.name.full')(contact)` (partial application without a `partial` helper like `Function.prototype.bind`)
+
+Since `selectn` is a 2-ary function, we don't need to use an external library for currying as the algorithm is simple.
+
 ## Alternatives
 
 - You can use [typeof][]; however, [typeof][] only "appears" to work due to the way the global scope is _implied_.
