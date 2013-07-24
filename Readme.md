@@ -34,6 +34,10 @@
 
     $ npm install selectn
 
+[global][]
+
+    <script src="https://raw.github.com/wilmoore/selectn/master/selectn.js"></script>
+
 ## Example (immediate access)
 
 Given the following object:
@@ -169,4 +173,5 @@ Since `selectn` is a 2-ary function, we don't need to use an external library fo
 [promises]:    http://promises-aplus.github.io/promises-spec/
 [map]:         https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 [filter]:      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+[global]:      http://yuiblog.com/blog/2006/06/01/global-domination/
 
