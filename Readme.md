@@ -34,6 +34,14 @@
 
     $ npm install selectn
 
+[jam](http://jamjs.org/packages/#/details/selectn)
+
+    $ jam install selectn
+
+[volo](http://volojs.org)
+
+    $ volo add wilmoore/selectn
+
 [global][]
 
     <script src="https://raw.github.com/wilmoore/selectn/master/selectn.js"></script>
