@@ -30,6 +30,6 @@
     "include": [ "selectn.js", "Readme.md" ]
   },
   "volo": {
-    "url": "https://raw.github.com/wilmoore/selectn/{version}/selectn.js"
+    "url": "https://raw.github.com/wilmoore/selectn/v{version}/selectn.js"
   }
 }
