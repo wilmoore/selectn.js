@@ -12,6 +12,12 @@ describe('selectn()', function(){
     { info: { name: 'Setting the Stage',      feedback: [8, 9, 10] }}
   ];
 
+  var books  = {
+    part: [ 
+      { chapter: [ { title: 'getting started' }, { title: 'going with the flow' } ] }
+    ]
+  };
+
   it('returns an accessor function', function() {
     var accessor = select('a.b.c');
     expect(accessor).to.be.a('function');
@@ -65,6 +71,11 @@ describe('selectn()', function(){
     var partial = select('info.name')(talk);
 
     assert(normal === partial);
+  });
+
+  it('supports nested array indexes', function() {
+    var out = select('part[0].chapter[1]', books);
+    expect(out.title).to.equal('going with the flow');
   });
 
 });

@@ -29,7 +29,7 @@ function selectn(query) {
   var parts;
 
   // normalize query to `.property` access (i.e. `a.b[0]` becomes `a.b.0`)
-  query = query.replace(/\[(\d+)\]/, '.$1');
+  query = query.replace(/\[(\d+)\]/g, '.$1');
   parts = query.split('.');
 
   /**
