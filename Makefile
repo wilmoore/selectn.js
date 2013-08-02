@@ -2,6 +2,8 @@ COMPONENT  ?= $(shell which component)
 STANDALONE := selectn
 MOCHAFLAGS ?= --reporter dot
 
+all: selectn.js
+
 build: components index.js
 	@$(COMPONENT) build --dev
 
