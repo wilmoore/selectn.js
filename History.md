@@ -1,5 +1,5 @@
 
-0.8.2 / 2013-08-02
+0.8.4 / 2013-08-02
 ==================
 
   * [bugfix] correctly support nested array syntax.
