@@ -1,6 +1,6 @@
-var select = require('..');
-var expect = require('chai').expect;
-var assert = require('chai').assert;
+var select = typeof require == 'function' ? require('..')          : window.selectn;
+var expect = typeof require == 'function' ? require('chai').expect : window.chai.expect;
+var assert = typeof require == 'function' ? require('chai').assert : window.chai.assert;
 
 describe('selectn()', function(){
 
