@@ -7,20 +7,27 @@
   </head>
   <body>
     <div id="mocha"></div>
+    <!-- test framework -->
     <script src="../node_modules/chai/chai.js"></script>
     <script src="../node_modules/mocha/mocha.js"></script>
+
+    <!-- source -->
     <script src="../selectn.js"></script>
+
+    <!-- mocha setup -->
     <script>
         mocha.ui('bdd');
         mocha.reporter('html');
     </script>
+
+    <!-- test suite -->
     <script src="index.js"></script>
+
+    <!-- runner -->
     <script>
-        if (window.mochaPhantomJS) {
-          mochaPhantomJS.run();
-        } else {
-          mocha.run();
-        }
+        window.mochaPhantomJS
+          ? mochaPhantomJS.run()
+          : mocha.run();
     </script>
   </body>
 </html>
