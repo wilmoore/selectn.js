@@ -1,24 +1,19 @@
-COMPONENT  ?= $(shell which component)
+.PHONY: clean test
+
 STANDALONE := selectn
-MOCHAFLAGS ?= --reporter dot
-
-all: $(STANDALONE).js
-
-build: components index.js
-	@$(COMPONENT) build --dev
-
-components:
-	@$(COMPONENT) install --dev
+MOCHAFLAGS ?= --reporter spec
 
 clean:
-	$(RM) -fr build components $(STANDALONE).js
+	@$(RM) -fr node_modules $(STANDALONE).js
 
-$(STANDALONE).js: components index.js
-	@$(COMPONENT) build --standalone $(STANDALONE) --name $(STANDALONE) --out .
+$(STANDALONE).js: index.js
+	@./node_modules/.bin/browserify  --entry $< --outfile $@ --standalone $(STANDALONE) 
 
-test:
+test: node_modules
 	@./node_modules/.bin/mocha $(MOCHAFLAGS)
 
-package: test $(STANDALONE).js
+node_modules: package.json
+	@npm prune
+	@npm install
 
-.PHONY: clean test
+package: test $(STANDALONE).js

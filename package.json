@@ -24,7 +24,8 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "chai": "*"
+    "chai": "*",
+    "browserify": "~2.27.1"
   },
   "jam": {
     "include": [
