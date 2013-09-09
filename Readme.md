@@ -4,7 +4,7 @@
 [![Build Status](https://david-dm.org/wilmoore/selectn.png)](https://david-dm.org/wilmoore/selectn)
 [![NPM version](https://badge.fury.io/js/selectn.png)](http://badge.fury.io/js/selectn)
 
-  N-levels deep object access via dot/bracket-notation property access string allowing you to type `selectn('info.name.full')` instead of `obj && obj.info && obj.info.name &&`, &infin;.
+  N-levels deep object access via dot/bracket-notation allowing you to type `selectn('info.name.full')` instead of `obj && obj.info && obj.info.name && ...`; for Node.js and the browser.
 
 ## Features
 
