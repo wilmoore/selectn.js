@@ -7,7 +7,7 @@ clean:
 	@$(RM) -fr node_modules $(STANDALONE).js
 
 $(STANDALONE).js: index.js
-	@./node_modules/.bin/browserify  --entry $< --outfile $@ --standalone $(STANDALONE) 
+	@./node_modules/.bin/browserify --entry $< --outfile $@ --standalone $(STANDALONE) 
 
 test: node_modules $(STANDALONE).js
 	@echo Running Node.js tests
