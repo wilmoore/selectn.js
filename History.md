@@ -1,4 +1,9 @@
 
+0.9.0 / 2013-09-08
+==================
+
+  * generates standalone module via browserify instead of component(1).
+
 0.8.4 / 2013-08-02
 ==================
 

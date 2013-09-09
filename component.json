@@ -2,7 +2,7 @@
   "name": "selectn",
   "repo": "wilmoore/selectn",
   "description": "N-levels deep object access via dot/bracket-notation property access string.",
-  "version": "0.8.6",
+  "version": "0.9.0",
   "keywords": [
     "object",
     "property",
