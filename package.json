@@ -2,7 +2,7 @@
   "name": "selectn",
   "author": "Wil Moore III <wil.moore@wilmoore.com>",
   "description": "N-levels deep object access via dot/bracket-notation for Node.js and the browser.",
-  "version": "0.9.0",
+  "version": "0.9.2",
   "keywords": [
     "object",
     "property",
