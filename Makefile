@@ -5,6 +5,7 @@ MOCHAFLAGS ?= --reporter spec
 
 clean:
 	@$(RM) -fr node_modules $(STANDALONE).js
+	@$(RM) -fr npm-debug.log
 
 $(STANDALONE).js: index.js
 	@./node_modules/.bin/browserify --entry $< --outfile $@ --standalone $(STANDALONE) 
