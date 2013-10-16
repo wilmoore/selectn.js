@@ -46,7 +46,7 @@
 
 [global][]
 
-    <script src="https://raw.github.com/wilmoore/selectn/master/selectn.js"></script>
+    <script src="https://raw.github.com/wilmoore/selectn/master/selectn.min.js"></script>
 
 ## Example (immediate access)
 
