@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/wilmoore/selectn.png?branch=master)](https://travis-ci.org/wilmoore/selectn)
 [![Build Status](https://david-dm.org/wilmoore/selectn.png)](https://david-dm.org/wilmoore/selectn)
 [![NPM version](https://badge.fury.io/js/selectn.png)](http://badge.fury.io/js/selectn)
-[![frozen](http://hughsk.github.io/stability-badges/dist/frozen.svg)](http://github.com/hughsk/stability-badges)
+[![frozen](http://hughsk.github.io/stability-badges/dist/frozen.svg)](http://nodejs.org/api/documentation.html#documentation_stability_index)
 
   N-levels deep object access via dot/bracket-notation allowing you to type `selectn('info.name.full')` instead of `obj && obj.info && obj.info.name && ...`; for Node.js and the browser.
 
