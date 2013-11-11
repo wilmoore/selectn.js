@@ -78,4 +78,12 @@ describe('selectn()', function(){
     expect(out.title).to.equal('going with the flow');
   });
 
+  it('supports dashed hash keys', function() {
+    var data = { stats: {
+      'temperature-today': 40
+    }};
+
+    assert(select('stats.temperature-today', data) === 40);
+  });
+
 });
