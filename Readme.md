@@ -51,13 +51,13 @@
 
 ## Examples
 
-- [Basic deep properties access](#deeppropertyaccess)
-- [Dashed key properties](#dashedkeyproperties)
+- [Nested property access](#nested-property-access)
+- [Dashed keys](#dashed-keyas)
 - [Iterator](#iterator)
 - [Predicate](#predicate)
 - [Callback](#callback)
 
-### Deep property access
+### Nested property access
 
 Given the following object:
 
@@ -70,7 +70,7 @@ Apply the `selectn` function to the `path` and `object` parameters for error-fre
     selectn('info.name', talk);
     // => 'Go Ahead, Make a Mess'
 
-### Dashed key properties
+### Dashed keys
 
 Given the following object:
 
