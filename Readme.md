@@ -52,7 +52,7 @@
 ## Examples
 
 - [Nested property access](#nested-property-access)
-- [Dashed keys](#dashed-keyas)
+- [Dashed keys](#dashed-keys)
 - [Iterator](#iterator)
 - [Predicate](#predicate)
 - [Callback](#callback)
