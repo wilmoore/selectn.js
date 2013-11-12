@@ -2,7 +2,7 @@
   "name": "selectn",
   "author": "Wil Moore III <wil.moore@wilmoore.com>",
   "description": "Resolves deeply-nested object properties via dot or bracket-notation for Node.js and the browser.",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "keywords": [
     "object",
     "property",
