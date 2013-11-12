@@ -1,8 +1,8 @@
 {
   "name": "selectn",
-  "repo": "wilmoore/selectn",
+  "version": "0.9.5",
   "description": "Resolves deeply-nested object properties via dot or bracket-notation for Node.js and the browser.",
-  "version": "0.9.2",
+  "repo": "wilmoore/selectn",
   "keywords": [
     "object",
     "property",
