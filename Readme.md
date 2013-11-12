@@ -5,7 +5,15 @@
 [![NPM version](https://badge.fury.io/js/selectn.png)](http://badge.fury.io/js/selectn)
 [![frozen](http://hughsk.github.io/stability-badges/dist/frozen.svg)](http://nodejs.org/api/documentation.html#documentation_stability_index)
 
-  N-levels deep object access via dot/bracket-notation allowing you to type `selectn('info.name.full')` instead of `obj && obj.info && obj.info.name && ...`; for Node.js and the browser.
+  Resolves deeply-nested object properties via dot or bracket-notation for [Node.js][] and the browser.
+
+#### So you can do:
+
+    selectn('info.name.full', person)
+
+#### instead of:
+
+    person && person.info && person.info.name && person.info.name.full
 
 ## Features
 
@@ -188,4 +196,5 @@ Since `selectn` is a 2-ary function, we don't need to use an external library fo
 [map]:         https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 [filter]:      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 [global]:      http://yuiblog.com/blog/2006/06/01/global-domination/
+[Node.js]:     http://nodejs.org
 
