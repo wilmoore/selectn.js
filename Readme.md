@@ -150,7 +150,7 @@ Access the `Client.Message.id` property and log the result to the console:
 
 ### Avoid TypeError
 
-Avoid the dreaded `Cannot read property 'man' of undefined` **TypeError**. Instead, you'll get an `undefined` value.
+Avoid the dreaded `Cannot read property '...' of undefined` **TypeError**. Instead, you'll get an `undefined` value.
 
     var probable = model.get('probably-does-not-exist');
     selectn('further.nested.key', probable);
