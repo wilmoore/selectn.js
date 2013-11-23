@@ -65,6 +65,7 @@
 - [Iterator](#iterator)
 - [Predicate](#predicate)
 - [Callback](#callback)
+- [Avoid TypeError](#avoid-typeerror)
 
 ### Nested property access
 
@@ -136,7 +137,7 @@ You expect the following JSON data from an XMLHttpRequest:
 
     var data = { Client: { Message: { id: d50afb80-a6be-11e2-9e96-0800200c9a66 } } };
 
-Access the `Client.Message.id` property and log the result to the console (using [promises][]):
+Access the `Client.Message.id` property and log the result to the console:
 
     $.ajax({...})
       .then(selectn('Client.Message.id'))
@@ -144,7 +145,17 @@ Access the `Client.Message.id` property and log the result to the console (using
 
     //=> d50afb80-a6be-11e2-9e96-0800200c9a66
 
-**NOTE**: Even if you don't use this methodology in production code, it can be a handy timesaver in terms of quick debugging.
+**NOTE**: This example assumes a [promises][] API, however, this example is applicable with any API that takes a function and returns the result of applying that function.
+**NOTE**: I use this frequently for quick debugging.
+
+### Avoid TypeError
+
+Avoid the dreaded `Cannot read property 'man' of undefined` **TypeError**. Instead, you'll get an `undefined` value.
+
+    var probable = model.get('probably-does-not-exist');
+    selectn('further.nested.key', probable);
+
+    //=> undefined
 
 ## Rationale
 
@@ -158,7 +169,7 @@ In larger, data-driven applications, there tends to be a need to do a lot of dee
 
 The following is much more concise:
 
-    var name = selectn('info.name.full')(contact) || 'unknown';
+    var name = selectn('info.name.full', contact) || 'unknown';
 
 ## Neckbeard Info
 
