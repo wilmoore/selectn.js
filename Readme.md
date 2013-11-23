@@ -48,9 +48,15 @@
 
     $ volo add wilmoore/selectn
 
-[global][]
+[manual][]
 
-    <script src="https://raw.github.com/wilmoore/selectn/master/selectn.min.js"></script>
+1. download
+
+        % curl -#O https://raw.github.com/wilmoore/selectn/master/selectn.min.js
+
+2. use
+
+        <script src="selectn.min.js"></script>
 
 ## Examples
 
@@ -190,6 +196,6 @@ Since `selectn` is a 2-ary function, we don't need to use an external library fo
 [promises]:    http://promises-aplus.github.io/promises-spec/
 [map]:         https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 [filter]:      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
-[global]:      http://yuiblog.com/blog/2006/06/01/global-domination/
+[manual]:      http://yuiblog.com/blog/2006/06/01/global-domination/
 [Node.js]:     http://nodejs.org
 
