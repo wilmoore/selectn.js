@@ -1,9 +1,4 @@
-# selectn
-
-[![Build Status](https://travis-ci.org/wilmoore/selectn.png?branch=master)](https://travis-ci.org/wilmoore/selectn)
-[![Build Status](https://david-dm.org/wilmoore/selectn.png)](https://david-dm.org/wilmoore/selectn)
-[![NPM version](https://badge.fury.io/js/selectn.png)](http://badge.fury.io/js/selectn)
-[![frozen](http://hughsk.github.io/stability-badges/dist/frozen.svg)](http://nodejs.org/api/documentation.html#documentation_stability_index)
+# selectn [![Build Status](https://travis-ci.org/wilmoore/selectn.png?branch=master)](https://travis-ci.org/wilmoore/selectn) [![Build Status](https://david-dm.org/wilmoore/selectn.png)](https://david-dm.org/wilmoore/selectn) [![NPM version](https://badge.fury.io/js/selectn.png)](http://badge.fury.io/js/selectn)
 
   Resolves deeply-nested object properties via dot or bracket-notation for [Node.js][] and the browser.
 
