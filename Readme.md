@@ -52,11 +52,11 @@
 
 1. download
 
-        % curl -#O https://raw.github.com/wilmoore/selectn/master/selectn.min.js
+        % curl -#O https://raw.github.com/wilmoore/selectn/master/selectn.js
 
 2. use
 
-        <script src="selectn.min.js"></script>
+        <script src="selectn.js"></script>
 
 ## Examples
 
