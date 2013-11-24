@@ -24,7 +24,8 @@
 
 ## Non-Features
 
-  - No `eval` and [friends][Function].
+  - No [eval][] or [Function][] (see: [`eval`][note] in disguise).
+  - No [typeof][] since, [typeof][] is not a real solution to this problem but can _appear_ to be due to the way the global scope is _implied_.
 
 ## Installation
 
@@ -61,11 +62,11 @@
 ## Examples
 
 - [Nested property access](#nested-property-access)
+- [Avoid TypeError](#avoid-typeerror)
 - [Dashed keys](#dashed-keys)
 - [Iterator](#iterator)
 - [Predicate](#predicate)
 - [Callback](#callback)
-- [Avoid TypeError](#avoid-typeerror)
 
 ### Nested property access
 
@@ -79,6 +80,18 @@ Apply the `selectn` function to the `path` and `object` parameters for error-fre
 
     selectn('info.name', talk);
     // => 'Go Ahead, Make a Mess'
+
+### Avoid TypeError
+
+Avoid the dreaded `Cannot read property '...' of undefined` **TypeError**. Instead, `selectn` will return `undefined`.
+
+    function getName(talk) {
+      // NOTE: as called below, `talk` is `undefined`
+      return selectn('info.name', talk);
+    }
+
+    getName();
+    //=> undefined
 
 ### Dashed keys
 
@@ -145,45 +158,7 @@ Access the `Client.Message.id` property and log the result to the console:
 
     //=> d50afb80-a6be-11e2-9e96-0800200c9a66
 
-**NOTE**: This example assumes a [promises][] API, however, this example is applicable with any API that takes a function and returns the result of applying that function.
-**NOTE**: I use this frequently for quick debugging.
-
-### Avoid TypeError
-
-Avoid the dreaded `Cannot read property '...' of undefined` **TypeError**. Instead, you'll get an `undefined` value.
-
-    var probable = model.get('probably-does-not-exist');
-    selectn('further.nested.key', probable);
-
-    //=> undefined
-
-## Rationale
-
-In larger, data-driven applications, there tends to be a need to do a lot of deep object access which can quickly lead to code like this:
-
-    var name;
-
-    if (contact && contact.info && contact.info.name) {
-      name = contact.info.name.full || 'unknown';
-    }
-
-The following is much more concise:
-
-    var name = selectn('info.name.full', contact) || 'unknown';
-
-## Neckbeard Info
-
-In case you care about this sort of thing, we are able to do normal function application as well as partially apply when that is convenient due to `currying`.
-
-- `selectn('info.name.full', contact)` (normal function application)
-- `selectn('info.name.full')(contact)` (partial application without a `partial` helper like `Function.prototype.bind`)
-
-Since `selectn` is a 2-ary function, we don't need to use an external library for currying as the algorithm is simple.
-
-## Alternatives
-
-- You can use [typeof][]; however, [typeof][] only "appears" to work due to the way the global scope is _implied_.
-- Other solutions involve [eval][] and/or [Function][] ([`eval`][note] in disguise).
+While this example assumes a [promises][] API, this is applicable with any API which takes a function and returns the result of applying that function.
 
 ## Inspiration
 
@@ -194,8 +169,6 @@ Since `selectn` is a 2-ary function, we don't need to use an external library fo
 ## License
 
   MIT
-
-
 
 [to-function]: https://github.com/component/to-function
 [reach]:       https://github.com/spumko/hoek#reachobj-chain
