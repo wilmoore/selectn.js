@@ -26,7 +26,8 @@
     "mocha": "*",
     "chai": "*",
     "browserify": "~2.27.1",
-    "mocha-phantomjs": "~3.1.1"
+    "mocha-phantomjs": "~3.1.1",
+    "jsonlint": "~1.6.0"
   },
   "jam": {
     "include": [

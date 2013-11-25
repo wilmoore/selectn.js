@@ -16,6 +16,12 @@ test: node_modules $(STANDALONE).js
 	@echo Running Browser tests
 	@./node_modules/.bin/mocha-phantomjs test/index.browser.html
 
+lint:
+	@./node_modules/.bin/jsonlint -q package.json
+	@./node_modules/.bin/jsonlint -q component.json
+
+package.json: lint
+
 node_modules: package.json
 	@npm prune
 	@npm install
