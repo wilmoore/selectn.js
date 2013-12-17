@@ -163,7 +163,12 @@ While this example assumes a [promises][] API, this is applicable with any API w
 
 - [to-function][]
 - [reach][]
+
+## Alternatives
+
 - [dref][]
+- [path-lookup][]
+
 
 ## License
 
@@ -173,6 +178,7 @@ While this example assumes a [promises][] API, this is applicable with any API w
 [reach]:       https://github.com/spumko/hoek#reachobj-chain
 [curry]:       http://benalman.com/news/2012/09/partial-application-in-javascript/#currying
 [dref]:        https://github.com/crcn/dref.js
+[path-lookup]: https://github.com/yields/path-lookup
 [Function]:    https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function
 [eval]:        https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/eval
 [note]:        https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Operators/Member_Operators#Note_on_eval
