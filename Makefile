@@ -16,12 +16,6 @@ test: node_modules $(STANDALONE).js
 	@echo Running Browser tests
 	@./node_modules/.bin/mocha-phantomjs test/index.browser.html
 
-lint:
-	@./node_modules/.bin/jsonlint -q package.json
-	@./node_modules/.bin/jsonlint -q component.json
-
-package.json: lint
-
 node_modules: package.json
 	@npm prune
 	@npm install
@@ -30,3 +24,4 @@ bower_register:
 	@bower register $(STANDALONE) `node -e "console.log(require('./package.json').repository.url)"`
 
 release: test $(STANDALONE).js
+

@@ -13,27 +13,16 @@
     "functor"
   ],
   "main": "./index",
+  "browser": "./index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/wilmoore/selectn"
   },
-  "component": {
-    "scripts": {
-      "selectn": "index.js"
-    }
-  },
   "devDependencies": {
     "mocha": "*",
     "chai": "*",
-    "browserify": "~2.27.1",
-    "mocha-phantomjs": "~3.1.1",
-    "jsonlint": "~1.6.0"
-  },
-  "jam": {
-    "include": [
-      "selectn.js",
-      "Readme.md"
-    ]
+    "browserify": "*",
+    "mocha-phantomjs": "*"
   },
   "volo": {
     "url": "https://raw.github.com/wilmoore/selectn/v{version}/selectn.js"

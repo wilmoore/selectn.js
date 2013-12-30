@@ -40,10 +40,6 @@
 
 [![NPM](https://nodei.co/npm/selectn.png?downloads=true)](https://nodei.co/npm/selectn/)
 
-[jam](http://jamjs.org/packages/#/details/selectn)
-
-    $ jam install selectn
-
 [volo](http://volojs.org)
 
     $ volo add wilmoore/selectn
