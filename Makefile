@@ -27,6 +27,6 @@ node_modules: package.json
 	@npm install
 
 bower_register:
-	@bower register $(STANDALONE).js `node -e "console.log(require('./package.json').repository.url)"`
+	@bower register $(STANDALONE) `node -e "console.log(require('./package.json').repository.url)"`
 
 release: test $(STANDALONE).js
