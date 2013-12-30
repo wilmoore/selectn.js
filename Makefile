@@ -8,7 +8,7 @@ clean:
 	@$(RM) -fr npm-debug.log
 
 $(STANDALONE).js: index.js
-	@./node_modules/.bin/browserify --entry $< --outfile $@ --standalone $(STANDALONE) 
+	@./node_modules/.bin/browserify --entry $< --outfile $@ --standalone $(STANDALONE)
 
 test: node_modules $(STANDALONE).js
 	@echo Running Node.js tests
@@ -25,5 +25,8 @@ package.json: lint
 node_modules: package.json
 	@npm prune
 	@npm install
+
+bower_register:
+	@bower register $(STANDALONE).js `node -e "console.log(require('./package.json').repository.url)"`
 
 release: test $(STANDALONE).js
