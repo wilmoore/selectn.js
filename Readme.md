@@ -4,7 +4,7 @@
 
 #### So you can do:
 
-    selectn('info.name.full', person)
+    selectn('info.name.full', person);
 
 #### instead of:
 
