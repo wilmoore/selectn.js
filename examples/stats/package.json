@@ -1,0 +1,9 @@
+{
+  "name": "stats",
+  "version": "0.0.0",
+  "description": "stats example",
+  "main": "index.js",
+  "private": true,
+  "author": "Wil Moore III <wil.moore@wilmoore.com> (http://github.com/wilmoore)",
+  "license": "MIT"
+}
