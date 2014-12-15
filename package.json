@@ -12,6 +12,9 @@
     "predicate",
     "functor"
   ],
+  "files": [
+    "index.js"
+  ],
   "main": "./index",
   "browser": "./index.js",
   "repository": {
