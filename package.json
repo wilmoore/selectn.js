@@ -13,7 +13,8 @@
     "functor"
   ],
   "files": [
-    "index.js"
+    "index.js",
+    "LICENSE"
   ],
   "main": "./index",
   "browser": "./index.js",
