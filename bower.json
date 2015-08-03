@@ -1,0 +1,10 @@
+{
+  "name": "selectn",
+  "main": "selectn.js",
+  "version": "0.9.6",
+  "homepage": "https://github.com/wilmoore/selectn",
+  "authors": [
+    "Wil Moore III <wil.moore@wilmoore.com>"
+  ],
+  "license": "MIT"
+}
