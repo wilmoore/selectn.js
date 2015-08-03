@@ -1,0 +1,16 @@
+{
+  "name": "selectn",
+  "homepage": "https://github.com/wilmoore/selectn",
+  "version": "0.9.6",
+  "main": "./selectn.js",
+  "_release": "0.9.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.9.6",
+    "commit": "2986982f12dc790d1184f5ce561f0df2da1c792c"
+  },
+  "_source": "https://github.com/wilmoore/selectn.git",
+  "_target": "~0.9.6",
+  "_originalSource": "selectn",
+  "_direct": true
+}
