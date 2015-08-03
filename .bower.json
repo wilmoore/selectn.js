@@ -2,7 +2,7 @@
   "name": "selectn",
   "homepage": "https://github.com/wilmoore/selectn",
   "version": "0.9.6",
-  "main": "./selectn.js",
+  "main": "selectn.js",
   "_release": "0.9.6",
   "_resolution": {
     "type": "version",
