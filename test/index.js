@@ -86,4 +86,15 @@ describe('selectn()', function(){
     assert(select('stats.temperature-today', data) === 40);
   });
 
+  it('accepts property array', function() {
+    var ndarray = [[8, 1, 6],
+                   [3, 5, 7],
+                   [4, 9, 2]];
+
+    var byString = select('1.2', ndarray);
+    var byArray = select([1, 2], ndarray);
+
+    assert(byString === byArray);
+  });
+
 });

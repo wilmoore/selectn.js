@@ -15,8 +15,8 @@ module.exports = selectn;
  *
  *      contacts.map(selectn('name.first'));
  *
- * @param  {String} query
- * dot/bracket-notation query string
+ * @param  {String | Array} query
+ * dot/bracket-notation query string or array of properties
  *
  * @param  {Object} object
  * object to access
@@ -28,9 +28,14 @@ module.exports = selectn;
 function selectn(query) {
   var parts;
 
-  // normalize query to `.property` access (i.e. `a.b[0]` becomes `a.b.0`)
-  query = query.replace(/\[(\d+)\]/g, '.$1');
-  parts = query.split('.');
+  if (Array.isArray(query)) {
+    parts = query;
+  }
+  else {
+    // normalize query to `.property` access (i.e. `a.b[0]` becomes `a.b.0`)
+    query = query.replace(/\[(\d+)\]/g, '.$1');
+    parts = query.split('.');
+  }
 
   /**
    * Accessor function that accepts an object to be queried
