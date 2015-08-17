@@ -97,4 +97,9 @@ describe('selectn()', function(){
     assert(byString === byArray);
   });
 
+  it('accesses properties of falsy objects', function() {
+    assert(select('foo.toString', { foo: false }) === Boolean.prototype.toString);
+    assert(select('toFixed', 0) === Number.prototype.toFixed);
+  });
+
 });

@@ -50,13 +50,13 @@ function selectn(query) {
    */
 
   function accessor(object) {
-    var ref = object || (1, eval)('this');
+    var ref = (object != null) ? object : (1, eval)('this');
     var len = parts.length;
     var idx = 0;
 
     // iteratively save each segment's reference
     for (; idx < len; idx += 1) {
-      if (ref) ref = ref[parts[idx]];
+      if (ref != null) ref = ref[parts[idx]];
     }
 
     return ref;
