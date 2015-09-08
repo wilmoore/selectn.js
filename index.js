@@ -1,5 +1,6 @@
-
-// expose `selectn`
+/*!
+ * exports.
+ */
 
 module.exports = selectn;
 
@@ -64,7 +65,6 @@ function selectn(query) {
 
   // curry accessor function allowing partial application
   return arguments.length > 1
-       ? accessor(arguments[1]) 
+       ? accessor(arguments[1])
        : accessor;
 }
-

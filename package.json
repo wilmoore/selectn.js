@@ -20,7 +20,7 @@
   "browser": "./index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wilmoore/selectn"
+    "url": "https://github.com/wilmoore/selectn.js"
   },
   "devDependencies": {
     "mocha": "*",
