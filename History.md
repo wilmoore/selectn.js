@@ -1,4 +1,11 @@
 
+0.10.0 / 2015-09-08
+==================
+
+  * accepts an array of properties
+  * better support for accessing falsy primitive values.
+  * added bower configuration allowing bower installer to work.
+
 0.9.6 / 2013-11-11
 ==================
 
