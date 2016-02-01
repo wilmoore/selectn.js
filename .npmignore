@@ -5,3 +5,4 @@ Makefile
 contributing.md
 .editorconfig
 .travis.yml
+!selectn.js
