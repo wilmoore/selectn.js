@@ -1,17 +1,20 @@
+before_install:
+  - npm install -g npm
+
+cache:
+  directories:
+    - node_modules
+
+env:
+  global:
+    - secure: "P/VTe5NTEhM4kQ+IDm1Oz30h66gnvWL9MDy8wBIqVUDxzot5ioH1AlmooVOEwsSt8QP6y9wApdKh0OM27VLkjnuQxZxbQZawcr2/1VUUD3VPw4uTl2+4/wB2TkiwBbwAtrudz3vpv4kfN5kUu70SEBt3BRxhV3fDEtsnFtIg17M="
+    - secure: "Luax5lyvxwvXm96VYKSLUORfJf8kMJ6qptOfChh3bUmIjNigc4wCjVxt1iWRW1nPg4JPwoN2zjGlnFtCzqzB4qZf7yBpqr+pY2ga8nCh4IurnU18tHdP9UYsvgAK9SQRaZbRV1lJdxe8Gkvky555UY1/JVEJiZ3cqDc1qAwBis0="
+
 language: node_js
+
 node_js:
   - 0.10
-  - 0.11
-  - 0.12
-  - iojs-v1.0.4
-  - iojs-v2.0.2
-  - iojs-v3.0.0
-branches:
-  only:
-    - master
-before_install:
-  - npm install
-script:
-  - "make test"
-notifications:
-  email: true
+
+script: npm run test:browsers
+
+sudo: false

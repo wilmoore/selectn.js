@@ -1,6 +1,0 @@
-{
-  "http://example.com/product": { "page": "product", "count": 2 },
-  "http://example.com/contact": { "page": "contact", "count": 8 },
-  "http://example.com/allfree": { "page": "allfree", "count": 3 },
-  "http://example.com/welcome": { "page": "welcome", "count": 5 }
-}
