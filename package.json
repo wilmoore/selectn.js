@@ -27,8 +27,8 @@
     "license",
     "package.json",
     "readme.md",
-    "$npm_package_name.js",
-    "$npm_package_name.min.js"
+    "selectn.js",
+    "selectn.min.js"
   ],
   "homepage": "https://github.com/wilmoore/selectn.js",
   "keywords": [
