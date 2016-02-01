@@ -19,6 +19,7 @@
     "tap-spec": "^4.1.1",
     "tape": "^4.0.0",
     "tape-catch": "^1.0.4",
+    "uglify-js": "^2.6.1",
     "zuul": "^3.9.0"
   },
   "files": [
@@ -26,7 +27,8 @@
     "license",
     "package.json",
     "readme.md",
-    "selectn.js"
+    "$npm_package_name.js",
+    "$npm_package_name.min.js"
   ],
   "homepage": "https://github.com/wilmoore/selectn.js",
   "keywords": [
@@ -72,12 +74,13 @@
     "url": "https://github.com/wilmoore/selectn.js"
   },
   "scripts": {
-    "browserify:standalone": "browserify-standalone",
+    "clean": "rimraf $npm_package_name.js $npm_package_name.min.js",
     "cover": "istanbul cover test.js",
     "dependency-check": "dependency-check ./package.json && dependency-check ./package.json --unused --no-dev",
     "dev": "nodemon -x 'npm run test --silent' -e 'js json'",
+    "build": "browserify-standalone && uglifyjs $npm_package_name.js > $npm_package_name.min.js",
     "fixpack": "fixpack",
-    "prepublish": "npm run browserify:standalone",
+    "prepublish": "npm run build",
     "release-major": "npm version major && git push --follow-tags && npm publish",
     "release-minor": "npm version minor && git push --follow-tags && npm publish",
     "release-patch": "npm version patch && git push --follow-tags && npm publish",
