@@ -1,4 +1,9 @@
+.DS_Store
+.env
+.env.*
 components
+coverage
 build
 node_modules
 npm-debug.log
+selectn.js

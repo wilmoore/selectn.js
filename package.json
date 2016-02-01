@@ -1,34 +1,89 @@
 {
   "name": "selectn",
+  "description": "Curried property accessor function that resolves deeply-nested object properties via dot/bracket-notation string path while mitigating TypeErrors via friendly and composable API.",
   "version": "0.10.0",
-  "description": "Resolves deeply-nested object properties via dot or bracket-notation for Node.js and the browser.",
   "author": "Wil Moore III <wil.moore@wilmoore.com>",
-  "keywords": [
-    "object",
-    "property",
-    "access",
-    "deep",
-    "nested",
-    "predicate",
-    "functor"
-  ],
+  "bugs": "https://github.com/wilmoore/selectn.js/issues",
+  "dependencies": {
+    "brackets2dots": "^1.1.0",
+    "curry2": "^1.0.0",
+    "dotsplit.js": "^1.0.3"
+  },
+  "devDependencies": {
+    "browserify-standalone": "^0.3.0",
+    "dependency-check": "^2.4.0",
+    "fixpack": "^2.2.0",
+    "istanbul": "^0.4.2",
+    "nodemon": "^1.3.7",
+    "standard": "^5.4.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.0.0",
+    "tape-catch": "^1.0.4",
+    "zuul": "^3.9.0"
+  },
   "files": [
     "index.js",
-    "LICENSE"
+    "license",
+    "package.json",
+    "readme.md"
   ],
-  "main": "./index",
-  "browser": "./index.js",
+  "homepage": "https://github.com/wilmoore/selectn.js",
+  "keywords": [
+    "Mitigate TypeError",
+    "TypeError",
+    "access",
+    "accessor",
+    "bracket-notation string path",
+    "browser",
+    "callback",
+    "composable",
+    "compatible",
+    "curried",
+    "curry",
+    "deep",
+    "dot-notation string path",
+    "dot/bracket-notation",
+    "dot/bracket-notation string path",
+    "dref",
+    "es3",
+    "es3 compatible",
+    "functional",
+    "functor",
+    "higher-order",
+    "nested",
+    "object",
+    "parameter order",
+    "path-lookup",
+    "pathval",
+    "pointfree",
+    "predicate",
+    "property",
+    "property access",
+    "property accessor",
+    "reach",
+    "string path",
+    "to-function"
+  ],
+  "license": "MIT",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/wilmoore/selectn.js"
   },
-  "devDependencies": {
-    "mocha": "*",
-    "chai": "*",
-    "browserify": "*",
-    "mocha-phantomjs": "*"
-  },
-  "volo": {
-    "url": "https://raw.github.com/wilmoore/selectn/v{version}/selectn.js"
+  "scripts": {
+    "browserify:standalone": "browserify-standalone",
+    "cover": "istanbul cover test.js",
+    "dependency-check": "dependency-check ./package.json && dependency-check ./package.json --unused --no-dev",
+    "dev": "nodemon -x 'npm run test --silent' -e 'js json'",
+    "fixpack": "fixpack",
+    "prepublish": "npm run browserify:standalone",
+    "release-major": "npm version major && git push --follow-tags && npm publish",
+    "release-minor": "npm version minor && git push --follow-tags && npm publish",
+    "release-patch": "npm version patch && git push --follow-tags && npm publish",
+    "standard": "standard",
+    "test": "npm run dependency-check && npm run standard --silent && node test.js | tap-spec",
+    "test:browsers": "zuul -- test.js",
+    "test:browsers:local": "zuul --local 8080 -- test.js",
+    "pretest:browsers": "npm test"
   }
 }

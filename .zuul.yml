@@ -1,0 +1,14 @@
+ui: tape
+browsers:
+  - name: android
+    version: latest
+  - name: chrome
+    version: latest
+  - name: firefox
+    version: latest
+  - name: ie
+    version: 9..latest
+  - name: iphone
+    version: latest
+  - name: safari
+    version: latest

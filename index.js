@@ -1,70 +1,50 @@
-/*!
+'use strict'
+
+/**
+ * imports.
+ */
+
+var dotted = require('brackets2dots')
+var splits = require('dotsplit.js')
+var curry2 = require('curry2')
+var string = Object.prototype.toString
+
+/**
  * exports.
  */
 
-module.exports = selectn;
+module.exports = curry2(selectn)
 
 /**
- * Select n-levels deep into an object given a dot/bracket-notation query.
- * If partially applied, returns a function accepting the second argument.
+ * Curried property accessor function that resolves deeply-nested object properties via dot/bracket-notation
+ * string path while mitigating `TypeErrors` via friendly and composable API.
  *
- * ### Examples:
+ * @param {String|Array} path
+ * Dot/bracket-notation string path or array.
  *
- *      selectn('name.first', contact);
+ * @param {Object} object
+ * Object to access.
  *
- *      selectn('addresses[0].street', contact);
- *
- *      contacts.map(selectn('name.first'));
- *
- * @param  {String | Array} query
- * dot/bracket-notation query string or array of properties
- *
- * @param  {Object} object
- * object to access
- *
- * @return {Function}
- * accessor function that accepts an object to be queried
+ * @return {Function|*|undefined}
+ * (1) returns `selectn/1` when partially applied.
+ * (2) returns value at path if path exists.
+ * (3) returns undefined if path does not exist.
  */
 
-function selectn(query) {
-  var parts;
+function selectn (path, object) {
+  var idx = -1
+  var seg = string.call(path) === '[object Array]' ? path : splits(dotted(path))
+  var end = seg.length
+  var ref = end ? object : void 0
 
-  if (Array.isArray(query)) {
-    parts = query;
-  }
-  else {
-    // normalize query to `.property` access (i.e. `a.b[0]` becomes `a.b.0`)
-    query = query.replace(/\[(\d+)\]/g, '.$1');
-    parts = query.split('.');
+  if (Object(ref) !== ref) {
+    return void 0
   }
 
-  /**
-   * Accessor function that accepts an object to be queried
-   *
-   * @private
-   *
-   * @param  {Object} object
-   * object to access
-   *
-   * @return {Mixed}
-   * value at given reference or undefined if it does not exist
-   */
-
-  function accessor(object) {
-    var ref = (object != null) ? object : (1, eval)('this');
-    var len = parts.length;
-    var idx = 0;
-
-    // iteratively save each segment's reference
-    for (; idx < len; idx += 1) {
-      if (ref != null) ref = ref[parts[idx]];
-    }
-
-    return ref;
+  while (++idx < end) {
+    ref = ref[seg[idx]]
+    if (ref === void 0) break
   }
 
-  // curry accessor function allowing partial application
-  return arguments.length > 1
-       ? accessor(arguments[1])
-       : accessor;
+  return typeof ref === 'function' ? ref() : ref
 }
