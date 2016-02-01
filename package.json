@@ -25,7 +25,8 @@
     "index.js",
     "license",
     "package.json",
-    "readme.md"
+    "readme.md",
+    "selectn.js"
   ],
   "homepage": "https://github.com/wilmoore/selectn.js",
   "keywords": [

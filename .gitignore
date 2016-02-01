@@ -1,6 +1,3 @@
-.DS_Store
-.env
-.env.*
 components
 coverage
 build
