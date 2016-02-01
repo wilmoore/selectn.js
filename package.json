@@ -1,7 +1,7 @@
 {
   "name": "selectn",
   "description": "Curried property accessor function that resolves deeply-nested object properties via dot/bracket-notation string path while mitigating TypeErrors via friendly and composable API.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Wil Moore III <wil.moore@wilmoore.com>",
   "bugs": "https://github.com/wilmoore/selectn.js/issues",
   "dependencies": {
