@@ -116,15 +116,6 @@ test('point-free', function (t) {
   t.end()
 })
 
-test('falsey objects/values always return undefined', function (t) {
-  t.equal(selectn('constructor', undefined), undefined, 'undefined')
-  t.equal(selectn('constructor', false), undefined, 'false')
-  t.equal(selectn('constructor', null), undefined, 'null')
-  t.equal(selectn('constructor', true), undefined, 'true')
-  t.equal(selectn('constructor', 0), undefined, '0')
-  t.end()
-})
-
 test('non-string paths always return undefined', function (t) {
   t.equal(selectn(/^$/, nonstring), undefined, 'RegExp')
   t.equal(selectn(({}).notdefined, nonstring), undefined, 'undefined')
@@ -133,5 +124,22 @@ test('non-string paths always return undefined', function (t) {
   t.equal(selectn(null, nonstring), undefined, 'null')
   t.equal(selectn(true, nonstring), undefined, 'true')
   t.equal(selectn(0, nonstring), undefined, '0')
+  t.end()
+})
+
+test('path of primitive values always returns undefined', function (t) {
+  t.equal(selectn('constructor', 'hello'), undefined, 'string')
+  t.equal(selectn('constructor', undefined), undefined, 'undefined')
+  t.equal(selectn('constructor', null), undefined, 'null')
+  t.equal(selectn('constructor', false), undefined, 'boolean false')
+  t.equal(selectn('constructor', true), undefined, 'boolean true')
+  t.equal(selectn('constructor', 0), undefined, 'number 0')
+  t.equal(selectn('constructor', 1), undefined, 'number 1')
+  t.end()
+})
+
+test('issue #24', function (t) {
+  // https://github.com/wilmoore/selectn.js/issues/24#issuecomment-179119054
+  t.equal(selectn('_null.test', falsey), undefined, 'attempting to get property of non-object returns undefined')
   t.end()
 })

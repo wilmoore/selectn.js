@@ -37,13 +37,9 @@ function selectn (path, object) {
   var end = seg.length
   var ref = end ? object : void 0
 
-  if (Object(ref) !== ref) {
-    return void 0
-  }
-
   while (++idx < end) {
+    if (Object(ref) !== ref) return void 0
     ref = ref[seg[idx]]
-    if (ref === void 0) break
   }
 
   return typeof ref === 'function' ? ref() : ref
