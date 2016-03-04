@@ -34,6 +34,7 @@
   "keywords": [
     "Mitigate TypeError",
     "TypeError",
+    "TypeErrors",
     "access",
     "accessor",
     "bracket-notation string path",
@@ -73,6 +74,7 @@
     "type": "git",
     "url": "https://github.com/wilmoore/selectn.js"
   },
+  "reveal": true,
   "scripts": {
     "clean": "rimraf $npm_package_name.js $npm_package_name.min.js",
     "cover": "istanbul cover test.js",

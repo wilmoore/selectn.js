@@ -7,9 +7,9 @@
   ],
   "license": "MIT",
   "keywords": [
-    "Mitigate",
+    "Mitigate TypeError",
     "TypeError",
-    "TypeError",
+    "TypeErrors",
     "access",
     "accessor",
     "bracket-notation",

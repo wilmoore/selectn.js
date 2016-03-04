@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file (keepachangelog.com).
 
+## 1.0.6 - 2016-03-03
+### Added
+- Add example of support for keys containing `.` (array path).
+
 ## 1.0.5 - 2016-02-03
 ### Fixed
 - Fixed #24 (Test when value is 'null'): https://github.com/wilmoore/selectn.js/issues/24#issuecomment-179119054

@@ -115,6 +115,21 @@ contacts.map(primaryAddress)
 //=> [ '123 Main St, Broomfield, CO 80020', '123 Main St, Kirkland, IL 60146', undefined ]
 ```
 
+#### support for keys containing `.`
+> Pass an array as path instead of a string.
+
+```js
+var selectn = require('selectn')
+var data = {
+  client: {
+    'message.id': 'd50afb80-a6be-11e2-9e96-0800200c9a66'
+  }
+}
+
+selectn(['client', 'message.id'], data)
+//=> 'd50afb80-a6be-11e2-9e96-0800200c9a66'
+```
+
 ## API (partial application)
 
 ### `selectn(String|Array)`
