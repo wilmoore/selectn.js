@@ -40,6 +40,10 @@ or
 
     contacts.map(selectn('addresses[0]')))
 
+## Demo
+
+[![npm](https://cloudup.com/c1SCaPFONFn+)](https://www.npmjs.org/package/selectn)
+
 ## Features
 
   - Mitigates boilerplate guards like `if (obj && obj.a && obj.a.b && obj.a.b.c) { return obj.a.b.c; }`.
