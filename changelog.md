@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file (keepachangelog.com).
 
+## 1.0.7 - 2016-03-05
+### Removed
+- Remove `iphone` from list of sauce-labs browsers to test as it has been flaky as of late.
+
 ## 1.0.6 - 2016-03-03
 ### Added
 - Add example of support for keys containing `.` (array path).
