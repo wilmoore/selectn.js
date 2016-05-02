@@ -1,5 +1,5 @@
 # selectn
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/selectn.svg)](https://saucelabs.com/u/selectn)
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/wilmoore-selectn.svg)](https://saucelabs.com/u/wilmoore-selectn)
 > Curried [property accessor][Property accessors] function that resolves deeply-nested object properties via dot/bracket-notation string path while mitigating `TypeErrors` via friendly and composable API.
 
 [![Build Status](http://img.shields.io/travis/wilmoore/selectn.js.svg)](https://travis-ci.org/wilmoore/selectn.js) [![Code Climate](https://codeclimate.com/github/wilmoore/selectn.js/badges/gpa.svg)](https://codeclimate.com/github/wilmoore/selectn.js) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
