@@ -5,3 +5,4 @@ node_modules
 npm-debug.log
 selectn.js
 selectn.min.js
+!index.js
