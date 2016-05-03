@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file (keepachangelog.com).
 
+## 1.0.18 - 2016-05-02
+### Added
+- Add API usage example for case where value at path is a function and is automatically invoked.
+- This is an old feature but I've finally gotten around to adding a usage example.
+
 ## 1.0.17 - 2016-05-02
 ### Fixed
 - (FIXED) Missing index.js in published packages after 1.0.8 #28.

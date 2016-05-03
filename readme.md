@@ -134,6 +134,18 @@ selectn(['client', 'message.id'], data)
 //=> 'd50afb80-a6be-11e2-9e96-0800200c9a66'
 ```
 
+#### value at path is a function
+> Avoid `var fn = data.may.be.a.fn; if (typeof fn === 'function') fn()`.
+
+```js
+var selectn = require('selectn')
+function hi () { return 'hi' }
+var data = { may: { be: { a: { fn: hi } } } }
+
+selectn('may.be.a.fn', data)
+//=> 'hi'
+```
+
 ## API (partial application)
 
 ### `selectn(String|Array)`
