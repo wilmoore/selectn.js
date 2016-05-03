@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file (keepachangelog.com).
 
+## 1.0.17 - 2016-05-02
+### Fixed
+- (FIXED) Missing index.js in published packages after 1.0.8 #28.
+- Corrected an issue where using `files` in `package.json` does not publish `index.js`.
+- Fix was to drop `files` and instead explicitly ignore unwanted files via `.npmignore`.
+
 ## 1.0.9 - 2016-03-05
 ### Changed
 - Updated `dependencies`.
