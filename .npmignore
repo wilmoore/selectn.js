@@ -1,8 +1,12 @@
-.editorconfig
-.envrc
-.gitattributes
-.travis.yml
-.zuul.yml
-contributing.md
-test.fixture.js
-test.js
+# settled on a reverse white-list approach to mitigate the case where files you may not want published get published by default unless ignored or not included in white-list.
+# use `irish-pub` to preview what will get published.
+# by default, the following files are also included in the publish:
+# - *.md
+# - package.json
+# - license
+*
+!.npmignore
+!bower.json
+!index.js
+!selectn.js
+!selectn.min.js
