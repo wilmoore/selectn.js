@@ -1,3 +1,8 @@
+.editorconfig
+.envrc
+.gitattributes
+.travis.yml
+.zuul.yml
 contributing.md
 test.fixture.js
 test.js
