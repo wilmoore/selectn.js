@@ -7,7 +7,7 @@ cache:
 
 env:
   global:
-    - secure: "P/VTe5NTEhM4kQ+IDm1Oz30h66gnvWL9MDy8wBIqVUDxzot5ioH1AlmooVOEwsSt8QP6y9wApdKh0OM27VLkjnuQxZxbQZawcr2/1VUUD3VPw4uTl2+4/wB2TkiwBbwAtrudz3vpv4kfN5kUu70SEBt3BRxhV3fDEtsnFtIg17M="
+    - secure: "VUN7RkZOcKJ+Xbru+5wOTHte+JYg75Tu3boyVHZhIvGlCTh7szmH71D3OcB9cSrN+2EyqEA1dm3aWqxHKtsVf2UOQs2ZYPyYGJ9ZjEohzxPnaoyEdBDLgwj91rELteK/tlx3qyqYuspmWN9UxVXlS71rZ21WTXMRq9/VmFbE7r4="
     - secure: "PHDAWk+2iHdTiTjKojSg4Fe/XeJYLdO7v2h0ACDQ8HQD0JihkgkXFNyDGx3cAmiKrlTK2busUL1S5WhyRrtCCm9G4ha77jyQ/ciChPXxTk9xf4tR2s1sn9aOrdDaQ6zMkERvObqS/W3c8qwHAG5O83xXy/2hGE/qF8rPEzrevMw="
 
 language: node_js
