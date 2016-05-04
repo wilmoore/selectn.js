@@ -7,8 +7,8 @@ cache:
 
 env:
   global:
-    - secure: "VUN7RkZOcKJ+Xbru+5wOTHte+JYg75Tu3boyVHZhIvGlCTh7szmH71D3OcB9cSrN+2EyqEA1dm3aWqxHKtsVf2UOQs2ZYPyYGJ9ZjEohzxPnaoyEdBDLgwj91rELteK/tlx3qyqYuspmWN9UxVXlS71rZ21WTXMRq9/VmFbE7r4="
-    - secure: "PHDAWk+2iHdTiTjKojSg4Fe/XeJYLdO7v2h0ACDQ8HQD0JihkgkXFNyDGx3cAmiKrlTK2busUL1S5WhyRrtCCm9G4ha77jyQ/ciChPXxTk9xf4tR2s1sn9aOrdDaQ6zMkERvObqS/W3c8qwHAG5O83xXy/2hGE/qF8rPEzrevMw="
+    - secure: "ShkaiyDNXXJ4TMBP/yKJw16Tts1SuFRtOrOTbXETHz6Nbm1vQyQ39tKHxK/5v9/58BTfrdKU9P6EU1pqPM/O7hV64o8q/GP25EO+qwqxD76U/vegSwr1C2Yw4j74MP3S5pjFgD4tkXxX4MWLBuYKBiexlyFidN/5r0O6f6Lfovo="
+    - secure: "OzvpbqjtWZG4Zdj4/uT/nSpZyXsUk1pjNQ9v93jR4eglUhd1q+E/h+C3FFmhTUpOWoV/M1bPnegDmOI1TrLvxxl1+3pJv2xVnLZfYPWEUV03ESBW1md9mLentjY2tnspgmU3PAoZIOyEC/uD+FU7hIH9bYp+vRLUgnzYd5EMXTU="
 
 language: node_js
 
