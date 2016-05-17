@@ -15,7 +15,7 @@
     "fixpack": "^2.2.0",
     "istanbul": "^0.4.2",
     "nodemon": "^1.3.7",
-    "standard": "^7.0.0",
+    "standard": "^7.1.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.0.0",
     "tape-catch": "^1.0.4",
