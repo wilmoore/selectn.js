@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file (keepachangelog.com).
 
+## 1.0.19 - 2016-07-13
+### Added
+- Add `debug` logging.
+
+### Changed
+- Update `.zuul.yml` to test only firefox versions `44..46` instead of just latest.
+
 ## 1.0.18 - 2016-05-02
 ### Added
 - Add API usage example for case where value at path is a function and is automatically invoked.
