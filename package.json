@@ -20,7 +20,7 @@
     "tap-spec": "^4.1.1",
     "tape": "^4.0.0",
     "tape-catch": "^1.0.4",
-    "uglify-js": "^2.6.1",
+    "uglify-js": "^2.7.0",
     "zuul": "^3.10.1"
   },
   "homepage": "https://github.com/wilmoore/selectn.js",
