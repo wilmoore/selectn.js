@@ -214,6 +214,7 @@ JS packages that have inpsired `selectn`:
 
 Alternative packages you might like instead of `selectn`:
 
+- [_.get]
 - [dref]
 - [path-lookup]
 - [pathval]
@@ -225,6 +226,7 @@ Alternative packages you might like instead of `selectn`:
 [![LICENSE](http://img.shields.io/npm/l/selectn.svg)](license)
 
 
+[_.get]: https://www.npmjs.com/package/lodash.get
 [Bower]: http://bower.io
 [Duo]: http://duojs.org
 [Function]: https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function
