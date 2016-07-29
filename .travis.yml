@@ -7,14 +7,15 @@ cache:
 
 env:
   global:
-    - secure: "ShkaiyDNXXJ4TMBP/yKJw16Tts1SuFRtOrOTbXETHz6Nbm1vQyQ39tKHxK/5v9/58BTfrdKU9P6EU1pqPM/O7hV64o8q/GP25EO+qwqxD76U/vegSwr1C2Yw4j74MP3S5pjFgD4tkXxX4MWLBuYKBiexlyFidN/5r0O6f6Lfovo="
-    - secure: "OzvpbqjtWZG4Zdj4/uT/nSpZyXsUk1pjNQ9v93jR4eglUhd1q+E/h+C3FFmhTUpOWoV/M1bPnegDmOI1TrLvxxl1+3pJv2xVnLZfYPWEUV03ESBW1md9mLentjY2tnspgmU3PAoZIOyEC/uD+FU7hIH9bYp+vRLUgnzYd5EMXTU="
+    - secure: >-
+        FFAJdIJqERTsGhZnJjaoBR/vGu+5L1VDYkz4UubKGVyxd17KwekJCZjHanrtQ8wcAo+lhRK6vZxrnvqxMHGY6ap6IJS/OnHhOq0ye4I6M9UDCUS2vOg7EVJBpNrgtn44NGZW0/YYSY3NgixFWIyWDgSWJUpj7aWJmi98+hyn9tw=
+    - secure: >-
+        BvlH0OVuBtut4uiqodeggh7lZoEUjT1/DvAKmm0LOxS0s4Zzl/3kAdGSw2OIxoe1l9KEHv5Yhe5HdeTepW7cN0lftV4vYNBlUT3ZHqUIokGns8Gz47yHnH2kIGEkhsGBPWMAN7ppBehZyGn50LhXTCLptt9e8m1hragijPZJMJA=
 
 language: node_js
 
 node_js:
   - 0.10
 
-script: npm run test:browsers
-
+script: 'npm run test:browsers'
 sudo: false
