@@ -21,7 +21,7 @@
     "tape": "^4.0.0",
     "tape-catch": "^1.0.4",
     "uglify-js": "^2.7.0",
-    "zuul": "^3.10.1"
+    "zuul": "^3.10.2"
   },
   "homepage": "https://github.com/wilmoore/selectn.js",
   "keywords": [
