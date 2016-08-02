@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file (keepachangelog.com).
 
+## 1.1.1 - 2016-08-01
+### Changed
+- Update `readme.md` with much nicer sauce-labs browser matrix from `exogen/badge-matrix`.
+
 ## 1.1.0 - 2016-08-01
 ### Changed
 - Update `zuul`, `nodemon`, and `dependency-check` to latest versions per greenkeeper.
