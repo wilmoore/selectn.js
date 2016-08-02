@@ -1,6 +1,16 @@
 # Change Log
 All notable changes to this project will be documented in this file (keepachangelog.com).
 
+## 1.1.0 - 2016-08-01
+### Changed
+- Update `zuul`, `nodemon`, and `dependency-check` to latest versions per greenkeeper.
+- Update sauce open credentials in `.travis.yml`
+
+### Added
+- Add `_.get` to alternatives list per @jasonkarns
+- Add new sauce labs repo badge.
+- Add `postversion` npm script.
+
 ## 1.0.22 - 2016-07-13
 ### Changed
 - Updated `depedency-check`, `uglify`, and `standard` to latest versions per greenkeeper.
