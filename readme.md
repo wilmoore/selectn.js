@@ -10,7 +10,7 @@ npm install selectn --save
 or
 
 ```html
-<script src="https://npmcdn.com/selectn/selectn.min.js"></script>
+<script src="https://unpkg.com/selectn/selectn.min.js"></script>
 ```
 
 > You may also install `selectn` via [Bower], [Duo], or [jspm].
