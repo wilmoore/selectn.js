@@ -7,7 +7,7 @@
   "dependencies": {
     "brackets2dots": "^1.1.0",
     "curry2": "^1.0.0",
-    "debug": "^2.2.0",
+    "debug": "^2.4.1",
     "dotsplit.js": "^1.0.3"
   },
   "devDependencies": {
