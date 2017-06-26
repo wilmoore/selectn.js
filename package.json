@@ -18,7 +18,7 @@
     "nodemon": "^1.11.0",
     "standard": "^8.0.0",
     "tap-spec": "^4.1.1",
-    "tape": "^4.6.3",
+    "tape": "^4.7.0",
     "tape-catch": "^1.0.4",
     "uglify-js": "^2.7.3",
     "zuul": "^3.11.0"
