@@ -1,7 +1,6 @@
 'use strict'
 
 var curry2 = require('curry2')
-var debug = require('debug')('selectn')
 var dotted = require('brackets2dots')
 var splits = require('dotsplit.js')
 var string = Object.prototype.toString
@@ -24,11 +23,6 @@ module.exports = curry2(selectn)
  * (3) returns undefined if path does not exist.
  */
 function selectn (path, object) {
-  debug('arguments:', {
-    path: path,
-    object: object
-  })
-
   var idx = -1
   var seg = string.call(path) === '[object Array]' ? path : splits(dotted(path))
   var end = seg.length
@@ -39,6 +33,5 @@ function selectn (path, object) {
     ref = ref[seg[idx]]
   }
 
-  debug('ref:', ref)
   return typeof ref === 'function' ? ref() : ref
 }
