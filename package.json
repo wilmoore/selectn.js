@@ -7,21 +7,20 @@
   "dependencies": {
     "brackets2dots": "^1.1.0",
     "curry2": "^1.0.0",
-    "debug": "^3.0.0",
     "dotsplit.js": "^1.0.3"
   },
   "devDependencies": {
-    "browserify-standalone": "^0.3.0",
-    "dependency-check": "^2.6.1",
-    "fixpack": "^2.2.0",
-    "istanbul": "^0.4.2",
-    "nodemon": "^1.11.0",
-    "standard": "^10.0.3",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.6.3",
-    "tape-catch": "^1.0.4",
-    "uglify-js": "^3.0.0",
-    "zuul": "^3.11.0"
+    "browserify-standalone": "0.3.0",
+    "dependency-check": "2.6.1",
+    "fixpack": "2.2.0",
+    "istanbul": "0.4.2",
+    "nodemon": "*",
+    "standard": "*",
+    "tap-spec": "4.1.1",
+    "tape": "4.6.3",
+    "tape-catch": "1.0.4",
+    "uglify-js": "*",
+    "zuul": "*"
   },
   "homepage": "https://github.com/wilmoore/selectn.js",
   "keywords": [
