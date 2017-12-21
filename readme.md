@@ -1,4 +1,6 @@
 # selectn
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/wilmoore/selectn.js.svg)](https://greenkeeper.io/)
 > Curried [property accessor][Property accessors] function that resolves deeply-nested object properties via dot/bracket-notation string path while mitigating `TypeErrors` via friendly and composable API.
 
 [![Build Status](http://img.shields.io/travis/wilmoore/selectn.js.svg)](https://travis-ci.org/wilmoore/selectn.js) [![Sauce Test Status](https://saucelabs.com/buildstatus/wilmoore-selectn)](https://saucelabs.com/u/wilmoore-selectn) [![Code Climate](https://codeclimate.com/github/wilmoore/selectn.js/badges/gpa.svg)](https://codeclimate.com/github/wilmoore/selectn.js) [![Greenkeeper badge](https://badges.greenkeeper.io/wilmoore/selectn.js.svg)](https://greenkeeper.io/) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) 
