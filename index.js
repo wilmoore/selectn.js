@@ -28,9 +28,12 @@ function selectn (path, object) {
   var end = seg.length
   var ref = end ? object : void 0
 
+  // console.log('select ref');
+  // console.log(ref);
+
   while (++idx < end) {
     if (Object(ref) !== ref) return void 0
-    ref = ref[seg[idx]]
+    ref = ref instanceof Map ? ref.get(seg[idx]) : ref[seg[idx]];
   }
 
   return typeof ref === 'function' ? ref() : ref
