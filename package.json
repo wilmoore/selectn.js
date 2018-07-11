@@ -14,7 +14,7 @@
     "dependency-check": "2.6.1",
     "fixpack": "2.2.0",
     "istanbul": "0.4.2",
-    "nodemon": "*",
+    "nodemon": ">=1.18.1",
     "standard": "*",
     "tap-spec": "4.1.1",
     "tape": "4.6.3",
