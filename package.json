@@ -6,7 +6,7 @@
   "bugs": "https://github.com/wilmoore/selectn.js/issues",
   "dependencies": {
     "brackets2dots": "^1.1.0",
-    "curry2": "^1.0.0",
+    "curry2": "1.0.2",
     "dotsplit.js": "^1.0.3"
   },
   "devDependencies": {
