@@ -30,7 +30,7 @@ function selectn (path, object) {
 
   while (++idx < end) {
     if (Object(ref) !== ref) return void 0
-    ref = ref[seg[idx]]
+    ref = ref instanceof Map ? ref.get(seg[idx]) : ref[seg[idx]];
   }
 
   return typeof ref === 'function' ? ref() : ref
