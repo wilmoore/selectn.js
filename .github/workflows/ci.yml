@@ -27,8 +27,4 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: npm run test:browsers
-
-    env:
-      SECURE_1: FFAJdIJqERTsGhZnJjaoBR/vGu+5L1VDYkz4UubKGVyxd17KwekJCZjHanrtQ8wcAo+lhRK6vZxrnvqxMHGY6ap6IJS/OnHhOq0ye4I6M9UDCUS2vOg7EVJBpNrgtn44NGZW0/YYSY3NgixFWIyWDgSWJUpj7aWJmi98+hyn9tw=
-      SECURE_2: BvlH0OVuBtut4uiqodeggh7lZoEUjT1/DvAKmm0LOxS0s4Zzl/3kAdGSw2OIxoe1l9KEHv5Yhe5HdeTepW7cN0lftV4vYNBlUT3ZHqUIokGns8Gz47yHnH2kIGEkhsGBPWMAN7ppBehZyGn50LhXTCLptt9e8m1hragijPZJMJA=
+        run: npm test
