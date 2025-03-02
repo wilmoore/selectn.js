@@ -1,9 +1,9 @@
 'use strict'
 
-var curry2 = require('curry2')
-var dotted = require('brackets2dots')
-var splits = require('dotsplit.js')
-var string = Object.prototype.toString
+const curry2 = require('curry2')
+const dotted = require('brackets2dots')
+const splits = require('dotsplit.js')
+const string = Object.prototype.toString
 
 module.exports = curry2(selectn)
 
@@ -23,13 +23,13 @@ module.exports = curry2(selectn)
  * (3) returns undefined if path does not exist.
  */
 function selectn (path, object) {
-  var idx = -1
-  var seg = string.call(path) === '[object Array]' ? path : splits(dotted(path))
-  var end = seg.length
-  var ref = end ? object : void 0
+  let idx = -1
+  const seg = string.call(path) === '[object Array]' ? path : splits(dotted(path))
+  const end = seg.length
+  let ref = end ? object : undefined
 
   while (++idx < end) {
-    if (Object(ref) !== ref) return void 0
+    if (Object(ref) !== ref) return undefined
     ref = ref[seg[idx]]
   }
 
