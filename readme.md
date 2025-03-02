@@ -2,7 +2,7 @@
 > Curried [property accessor][Property accessors] function that resolves deeply-nested object properties via dot/bracket-notation string path while mitigating `TypeErrors` via friendly and composable API.
 
 [![Build Status](https://github.com/wilmoore/selectn.js/actions/workflows/ci.yml/badge.svg)](https://github.com/wilmoore/selectn.js)
-[![Code Climate](https://codeclimate.com/github/wilmoore/selectn.js/badges/gpa.svg)](https://codeclimate.com/github/wilmoore/selectn.js) [![Greenkeeper badge](https://badges.greenkeeper.io/wilmoore/selectn.js.svg)](https://greenkeeper.io/) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![types](https://shields.io/badge/types-TypeScript-blue)](https://www.npmjs.com/package/@types/selectn) [![npm](https://img.shields.io/npm/v/selectn.svg)](https://www.npmjs.org/package/selectn) [![NPM downloads](http://img.shields.io/npm/dm/selectn.svg)](https://www.npmjs.org/package/selectn)
+[![Code Climate](https://codeclimate.com/github/wilmoore/selectn.js/badges/gpa.svg)](https://codeclimate.com/github/wilmoore/selectn.js) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![types](https://shields.io/badge/types-TypeScript-blue)](https://www.npmjs.com/package/@types/selectn) [![npm](https://img.shields.io/npm/v/selectn.svg)](https://www.npmjs.org/package/selectn) [![NPM downloads](http://img.shields.io/npm/dm/selectn.svg)](https://www.npmjs.org/package/selectn)
 
 ```shell
 yarn add selectn
