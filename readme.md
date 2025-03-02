@@ -2,7 +2,7 @@
 > Curried [property accessor][Property accessors] function that resolves deeply-nested object properties via dot/bracket-notation string path while mitigating `TypeErrors` via friendly and composable API.
 
 [![Build Status](https://github.com/wilmoore/selectn.js/actions/workflows/ci.yml/badge.svg)](https://github.com/wilmoore/selectn.js)
-[![Code Climate](https://codeclimate.com/github/wilmoore/selectn.js/badges/gpa.svg)](https://codeclimate.com/github/wilmoore/selectn.js) [![Greenkeeper badge](https://badges.greenkeeper.io/wilmoore/selectn.js.svg)](https://greenkeeper.io/) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![types](https://shields.io/badge/types-TypeScript-blue)](https://www.npmjs.com/package/@types/selectn)
+[![Code Climate](https://codeclimate.com/github/wilmoore/selectn.js/badges/gpa.svg)](https://codeclimate.com/github/wilmoore/selectn.js) [![Greenkeeper badge](https://badges.greenkeeper.io/wilmoore/selectn.js.svg)](https://greenkeeper.io/) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![types](https://shields.io/badge/types-TypeScript-blue)](https://www.npmjs.com/package/@types/selectn) [![npm](https://img.shields.io/npm/v/selectn.svg)](https://www.npmjs.org/package/selectn) [![NPM downloads](http://img.shields.io/npm/dm/selectn.svg)](https://www.npmjs.org/package/selectn)
 
 ```shell
 yarn add selectn
@@ -21,15 +21,6 @@ or
 ```
 
 > You may also install `selectn` via [Bower] or [jspm].
-
-###### npm stats
-
-[![npm](https://img.shields.io/npm/v/selectn.svg)](https://www.npmjs.org/package/selectn) [![NPM downloads](http://img.shields.io/npm/dm/selectn.svg)](https://www.npmjs.org/package/selectn) [![David](https://img.shields.io/david/wilmoore/selectn.js.svg)](https://david-dm.org/wilmoore/selectn.js)
-
-###### browser support
-> The browsers listed in [.zuul.yml](.zuul.yml) are continuously tested; however, `selectn` is also known to work on older unlisted legacy browsers.
-
-[![Build Status](https://saucelabs.com/buildstatus/wilmoore-selectn)](https://saucelabs.com/beta/builds/291d077241954304b35810157995fd82)
 
 ## Overview
 
