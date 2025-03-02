@@ -5,10 +5,10 @@
  */
 
 exports.talks = [
-  {info: { name: 'Go Ahead, Make a Mess', feedback: [8, 9, 10] }},
-  {info: { name: 'Silex Anatomy', feedback: [8, 9, 10] }},
-  {info: { name: 'Unit Testing in Python', feedback: [8, 9, 10] }},
-  {info: { name: 'Setting the Stage', feedback: [8, 9, 10] }}
+  { info: { name: 'Go Ahead, Make a Mess', feedback: [8, 9, 10] } },
+  { info: { name: 'Silex Anatomy', feedback: [8, 9, 10] } },
+  { info: { name: 'Unit Testing in Python', feedback: [8, 9, 10] } },
+  { info: { name: 'Setting the Stage', feedback: [8, 9, 10] } }
 ]
 
 /*!
@@ -17,10 +17,12 @@ exports.talks = [
 
 exports.books = {
   part: [
-    { chapter: [
+    {
+      chapter: [
         { title: 'getting started' },
         { title: 'going with the flow' }
-    ] }
+      ]
+    }
   ]
 }
 

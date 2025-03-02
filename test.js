@@ -4,45 +4,45 @@
  * imports.
  */
 
-var test = require('tape-catch')
+const test = require('tape-catch')
 
 /*!
  * imports (local).
  */
 
-var selectn = require('./')
-var fixture = require('./test.fixture')
+const selectn = require('./')
+const fixture = require('./test.fixture')
 
 /*!
  * fixtures.
  */
 
-var getfn = fixture.getfn
-var talks = fixture.talks
-var books = fixture.books
-var falsey = fixture.falsey
-var nonstring = fixture.nonstring
+const getfn = fixture.getfn
+const talks = fixture.talks
+const books = fixture.books
+const falsey = fixture.falsey
+const nonstring = fixture.nonstring
 
 /*!
  * tests.
  */
 
 test('selectn/1', function (t) {
-  var partial = selectn('a.b.c')
+  const partial = selectn('a.b.c')
   t.equal(typeof partial, 'function', 'returns an accessor function')
   t.equal(partial.length, 1, 'accessor function accepts a single parameter')
   t.end()
 })
 
 test('selectn/2', function (t) {
-  var data = talks[0]
+  const data = talks[0]
   t.equal(data.info.name, selectn('info.name', data), 'provides n-level property access')
   t.deepEqual(talks.map(getfn), talks.map(selectn('info.name')), 'creates accessor function for use with iterator functors')
   t.end()
 })
 
 test('bracket/numeric access', function (t) {
-  var parameters = [
+  const parameters = [
     {
       name: '[0].info.feedback[1]',
       data: talks[0].info.feedback[1]
@@ -68,14 +68,14 @@ test('bracket/numeric access', function (t) {
 })
 
 test('support query by array', function (t) {
-  var query = ['part', '0', 'chapter', '0', 'title']
-  var title = books.part[0].chapter[0].title
+  const query = ['part', '0', 'chapter', '0', 'title']
+  const title = books.part[0].chapter[0].title
   t.equal(selectn(query, books), title, 'selectn([])')
   t.end()
 })
 
 test('array indexing', function (t) {
-  var ndarray = [[8, 1, 6], [3, 5, 7], [4, 9, 2]]
+  const ndarray = [[8, 1, 6], [3, 5, 7], [4, 9, 2]]
   t.equal(selectn('1.2', ndarray), 7, "selectn('1.2')")
   t.equal(selectn([1, 2], ndarray), 7, 'selectn([1, 2])')
   t.end()
@@ -90,14 +90,14 @@ test('falsey objects return exact value', function (t) {
 })
 
 test('function application', function (t) {
-  var toString = function () {
+  const toString = function () {
     return name.last + ', ' + name.first
   }
 
-  var name = {
+  const name = {
     first: 'Wil',
     last: 'Moore',
-    toString: toString
+    toString
   }
 
   t.equal(selectn('toString', name), 'Moore, Wil', 'Function is applied')
@@ -105,8 +105,8 @@ test('function application', function (t) {
 })
 
 test('point-free', function (t) {
-  var predicate = selectn('isRunning')
-  var potential = [
+  const predicate = selectn('isRunning')
+  const potential = [
     { name: '_', isRunning: true },
     { name: '_', isRunning: false },
     { name: '_' },
