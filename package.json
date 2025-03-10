@@ -12,7 +12,7 @@
   "devDependencies": {
     "browserify-standalone": "0.3.0",
     "dependency-check": "2.6.1",
-    "fixpack": "2.2.0",
+    "fixpack": "3.0.3",
     "istanbul": "0.4.2",
     "nodemon": "*",
     "standard": "*",
